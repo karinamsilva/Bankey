@@ -7,11 +7,18 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate: AnyObject {
+    func didLogin()
+}
+
+
 class LoginViewController: UIViewController {
     
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorLabel = UILabel()
+    weak var delegate: LoginViewControllerDelegate?
+    
     let titleLabel = UILabel()
     let subtitleLabel = UILabel()
     
@@ -112,6 +119,7 @@ extension LoginViewController {
         if userName == "Karina" && password == "Welcome" {
             signInButton.configuration?.showsActivityIndicator = true
             signInButton.setTitle("Signing In", for: .normal)
+            delegate?.didLogin()
         } else {
             configureView(withMessage: "Incorret username/password")
         }
