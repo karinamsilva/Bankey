@@ -35,6 +35,10 @@ class LoginViewController: UIViewController {
         style()
         layout()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        signInButton.configuration?.showsActivityIndicator = false 
+    }
 
 }
 

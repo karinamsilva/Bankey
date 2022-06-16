@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol LogoutDelegate: AnyObject {
+    func didLogout()
+}
+
+
 class ViewController: UIViewController {
     
     let stackView = UIStackView()
