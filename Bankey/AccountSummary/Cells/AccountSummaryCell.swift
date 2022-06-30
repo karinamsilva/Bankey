@@ -10,6 +10,25 @@ import Foundation
 
 class AccountSummaryCell : UITableViewCell {
     
+    enum AccountType: String {
+        case Banking
+        case CreditCard
+        case Investment
+    }
+    
+    struct ViewModel {
+        let accountType: AccountType
+        let accountName: String
+        let balance: Decimal
+        
+        var balanceAsAttributedString: NSAttributedString {
+            return CurrencyFormatter().makeAttributedCurrency(balance)
+        }
+    }
+    
+    let viewModel: ViewModel? = nil
+    
+    
     let typeLabel = UILabel()
     let underlineView = UIView()
     let nameLabel = UILabel()
@@ -59,7 +78,7 @@ extension AccountSummaryCell {
         
         ammountBalanceLabel.translatesAutoresizingMaskIntoConstraints = false
         ammountBalanceLabel.textAlignment = .right
-        ammountBalanceLabel.attributedText = makeFormattedBalance(dollars: "929,466", cents: "63")
+        ammountBalanceLabel.attributedText = makeFormattedBalance(dollars: "xxx", cents: "xx")
         
         chevronImageView.translatesAutoresizingMaskIntoConstraints = false
         let chevron = UIImage(systemName: "chevron.right")?.withTintColor(appColor, renderingMode: .alwaysOriginal)
@@ -115,5 +134,25 @@ extension AccountSummaryCell {
         rootString.append(centString)
         
         return rootString
+    }
+}
+
+extension AccountSummaryCell {
+    func configure(with vm: ViewModel) {
+        typeLabel.text = vm.accountType.rawValue
+        nameLabel.text = vm.accountName
+        ammountBalanceLabel.attributedText = vm.balanceAsAttributedString
+        
+        switch vm.accountType {
+        case .Banking:
+            underlineView.backgroundColor = appColor
+            balanceLabel.text = "Current Balance"
+        case .CreditCard:
+            underlineView.backgroundColor = .systemOrange
+            balanceLabel.text = "Current Balance"
+        case .Investment:
+            underlineView.backgroundColor = .systemPurple
+            balanceLabel.text = "Value"
+        }
     }
 }
