@@ -29,7 +29,18 @@ class LoginViewController: UIViewController {
     var userName: String? {
         return loginView.userNameTextField.text
     }
-
+    
+    var leadingEdgeOnScreen: CGFloat = 16
+    var leadingEdgeOffScreen: CGFloat = -1000
+    
+    var subtitleLeadingAnchor: NSLayoutConstraint?
+    var titleLeadingAnchor: NSLayoutConstraint?
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animate()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
@@ -37,9 +48,9 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        signInButton.configuration?.showsActivityIndicator = false 
+        signInButton.configuration?.showsActivityIndicator = false
     }
-
+    
 }
 
 extension LoginViewController {
@@ -51,16 +62,24 @@ extension LoginViewController {
         view.addSubview(signInButton)
         view.addSubview(errorLabel)
         
+        titleLeadingAnchor = titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        titleLeadingAnchor?.isActive = true
+        
+        subtitleLeadingAnchor = subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        subtitleLeadingAnchor?.isActive = true
+        
         NSLayoutConstraint.activate([
             
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            subtitleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: titleLabel.leadingAnchor, multiplier: 1),
+            subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 3),
-            subtitleLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor),
+            subtitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
+            
+            
             
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: titleLabel.leadingAnchor, multiplier: 1),
+            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 3),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1),
             
@@ -92,6 +111,7 @@ extension LoginViewController {
         titleLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         titleLabel.text = "Bankey"
         titleLabel.textAlignment = .center
+        titleLabel.alpha = 0
         titleLabel.adjustsFontForContentSizeCategory = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -99,21 +119,22 @@ extension LoginViewController {
         subtitleLabel.numberOfLines = 0
         subtitleLabel.text = "Your premium source for all things banking!"
         subtitleLabel.textAlignment = .center
+        subtitleLabel.alpha = 0
         subtitleLabel.adjustsFontForContentSizeCategory = true
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
     }
 }
-    
-    extension LoginViewController {
-        @objc func signInTapped(sender: UIButton) {
-            errorLabel.isHidden = true
-            login()
-        }
+
+extension LoginViewController {
+    @objc func signInTapped(sender: UIButton) {
+        errorLabel.isHidden = true
+        login()
+    }
     
     private func login() {
         guard let userName = userName, let password = password else {
             assertionFailure("UserName/Password should never be blank")
-            return 
+            return
         }
         
         if userName.isEmpty || password.isEmpty {
@@ -132,7 +153,50 @@ extension LoginViewController {
     func configureView(withMessage message: String) {
         errorLabel.isHidden = false
         errorLabel.text = message
+        shakeButton()
+    }
+    
+    func shakeButton() {
+        let animation = CAKeyframeAnimation()
+        animation.keyPath = "position.x"
+        animation.values = [0, 10, -10, 10, 0]
+        animation.keyTimes = [0, 0.16, 0.5, 0.83, 1]
+        animation.duration = 0.4
+        animation.isAdditive = true
+        signInButton.layer.add(animation, forKey: "shake")
     }
 }
 
+extension LoginViewController {
+    private func animate() {
+        let duration = 2.0
+        
+        let animator1 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+            self.titleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator1.startAnimation(afterDelay: 0.5)
+        
+        let animator2 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+            self.subtitleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator2.startAnimation(afterDelay: 1)
+        
+        let animator3 = UIViewPropertyAnimator(duration: duration*2, curve: .easeInOut) {
+            self.titleLabel.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        animator3.startAnimation(afterDelay: 1)
+        
+        let animator4 = UIViewPropertyAnimator(duration: duration*2, curve: .easeInOut) {
+            self.subtitleLabel.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+
+        animator4.startAnimation(afterDelay: 1)
+    }
+    
+
+}
 

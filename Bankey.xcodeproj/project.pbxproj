@@ -13,6 +13,8 @@
 		848CCA3B28595F3D0046E1FC /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848CCA3A28595F3D0046E1FC /* AccountSummaryHeaderView.xib */; };
 		848D4F9B285F8323008B1F8B /* AccountSummaryHeaderViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D4F9A285F8323008B1F8B /* AccountSummaryHeaderViewCode.swift */; };
 		849945F3286E611600E31042 /* BankeyUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849945F2286E611600E31042 /* BankeyUnitTests.swift */; };
+		849945FA286F8B6F00E31042 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849945F9286F8B6F00E31042 /* NSNotificationName.swift */; };
+		849945FC286F8D5800E31042 /* UITextFieldSecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849945FB286F8D5800E31042 /* UITextFieldSecureToggle.swift */; };
 		84A1FE3A28614A2D001F846C /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1FE3928614A2D001F846C /* DecimalUtils.swift */; };
 		84A1FE3C28614A93001F846C /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1FE3B28614A93001F846C /* CurrencyFormatter.swift */; };
 		84A6C5AE2829E02E00D9746F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6C5AD2829E02E00D9746F /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 		84A6C5C52829E50D00D9746F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6C5C42829E50D00D9746F /* LoginView.swift */; };
 		84BF05C1284826F300E0BC7E /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF05C0284826F300E0BC7E /* UIViewController+Utils.swift */; };
 		84BF05C328482B4F00E0BC7E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF05C228482B4E00E0BC7E /* MainViewController.swift */; };
+		84E4218D28ADAA1600BD575A /* ShakeyBell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4218C28ADAA1600BD575A /* ShakeyBell.swift */; };
+		84E4219028ADB8F400BD575A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4218F28ADB8F400BD575A /* UIView+Extension.swift */; };
 		84FA33B5283D9EBE008F0BFF /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA33B4283D9EBE008F0BFF /* OnboardingContainerViewController.swift */; };
 		84FA33B7283DAAC6008F0BFF /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA33B6283DAAC6008F0BFF /* Controller.swift */; };
 		84FA33B9284041C2008F0BFF /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA33B8284041C2008F0BFF /* DummyViewController.swift */; };
@@ -46,6 +50,8 @@
 		848D4F9A285F8323008B1F8B /* AccountSummaryHeaderViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderViewCode.swift; sourceTree = "<group>"; };
 		849945F0286E611600E31042 /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849945F2286E611600E31042 /* BankeyUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyUnitTests.swift; sourceTree = "<group>"; };
+		849945F9286F8B6F00E31042 /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
+		849945FB286F8D5800E31042 /* UITextFieldSecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldSecureToggle.swift; sourceTree = "<group>"; };
 		84A1FE3928614A2D001F846C /* DecimalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtils.swift; sourceTree = "<group>"; };
 		84A1FE3B28614A93001F846C /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		84A6C5AA2829E02E00D9746F /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +63,8 @@
 		84A6C5C42829E50D00D9746F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		84BF05C0284826F300E0BC7E /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		84BF05C228482B4E00E0BC7E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84E4218C28ADAA1600BD575A /* ShakeyBell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBell.swift; sourceTree = "<group>"; };
+		84E4218F28ADB8F400BD575A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		84FA33B4283D9EBE008F0BFF /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		84FA33B6283DAAC6008F0BFF /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		84FA33B8284041C2008F0BFF /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
@@ -94,9 +102,8 @@
 		843C4266285BAE290014B778 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				848CCA3828595F170046E1FC /* AccountSummaryHeaderView.swift */,
-				848CCA3A28595F3D0046E1FC /* AccountSummaryHeaderView.xib */,
 				848D4F9A285F8323008B1F8B /* AccountSummaryHeaderViewCode.swift */,
+				84E4218E28ADAE9000BD575A /* StoryboardToDelete */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 				84FA33B3283D9EA0008F0BFF /* Onboarding  */,
 				84A6C5C32829E4DD00D9746F /* Login */,
 				84030C6A284ADE5B002C3220 /* AccountSummary */,
+				84E4218B28ADA9F500BD575A /* Components */,
 				84FA33BA28404CEB008F0BFF /* Utils */,
 				84A6C5C22829E4A100D9746F /* Files */,
 			);
@@ -169,6 +177,23 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		84E4218B28ADA9F500BD575A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				84E4218C28ADAA1600BD575A /* ShakeyBell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		84E4218E28ADAE9000BD575A /* StoryboardToDelete */ = {
+			isa = PBXGroup;
+			children = (
+				848CCA3828595F170046E1FC /* AccountSummaryHeaderView.swift */,
+				848CCA3A28595F3D0046E1FC /* AccountSummaryHeaderView.xib */,
+			);
+			path = StoryboardToDelete;
+			sourceTree = "<group>";
+		};
 		84FA33B3283D9EA0008F0BFF /* Onboarding  */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +210,9 @@
 				84BF05C0284826F300E0BC7E /* UIViewController+Utils.swift */,
 				84A1FE3928614A2D001F846C /* DecimalUtils.swift */,
 				84A1FE3B28614A93001F846C /* CurrencyFormatter.swift */,
+				849945F9286F8B6F00E31042 /* NSNotificationName.swift */,
+				849945FB286F8D5800E31042 /* UITextFieldSecureToggle.swift */,
+				84E4218F28ADB8F400BD575A /* UIView+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -310,9 +338,13 @@
 				843C4269285BAE6B0014B778 /* AccountSummaryCell.swift in Sources */,
 				84030C69284ADD4D002C3220 /* AccountSummaryViewController.swift in Sources */,
 				84BF05C328482B4F00E0BC7E /* MainViewController.swift in Sources */,
+				84E4219028ADB8F400BD575A /* UIView+Extension.swift in Sources */,
+				849945FA286F8B6F00E31042 /* NSNotificationName.swift in Sources */,
+				849945FC286F8D5800E31042 /* UITextFieldSecureToggle.swift in Sources */,
 				848CCA3928595F170046E1FC /* AccountSummaryHeaderView.swift in Sources */,
 				84FA33BC28404CF7008F0BFF /* LocalState.swift in Sources */,
 				84FA33B5283D9EBE008F0BFF /* OnboardingContainerViewController.swift in Sources */,
+				84E4218D28ADAA1600BD575A /* ShakeyBell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
