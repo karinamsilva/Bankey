@@ -15,6 +15,16 @@ class AccountSummaryHeaderView: UIView {
         return shakeyBellView
     }()
     
+    struct ViewModel {
+        let welcomeMessage: String
+        let name: String
+        let date: Date
+        
+        var formattedData: String {
+            return date.monthDayYearString
+        }
+    }
+    
     let contentView: UIView = {
         let contentView = UIView()
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -45,7 +55,6 @@ class AccountSummaryHeaderView: UIView {
     
     let titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.text = "Bankey"
         titleLabel.font = UIFont.preferredFont(forTextStyle: .title1)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         return titleLabel
@@ -62,7 +71,6 @@ class AccountSummaryHeaderView: UIView {
     let nameLabel: UILabel = {
         let nameLabel = UILabel()
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.text = "Karina"
         nameLabel.font = UIFont.systemFont(ofSize: 17)
         return nameLabel
     }()
@@ -70,7 +78,6 @@ class AccountSummaryHeaderView: UIView {
     let dateLabel: UILabel = {
         let dateLabel = UILabel()
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        dateLabel.text = "Date"
         dateLabel.font = UIFont.systemFont(ofSize: 17)
         return dateLabel
     }()
@@ -136,5 +143,11 @@ class AccountSummaryHeaderView: UIView {
             shakeyBellView.bottomAnchor.constraint(equalTo: bottomAnchor)
             
         ])
+    }
+    
+    func configure(viewModel: ViewModel) {
+        titleLabel.text = viewModel.welcomeMessage
+        nameLabel.text = viewModel.name
+        dateLabel.text = viewModel.formattedData
     }
 }
