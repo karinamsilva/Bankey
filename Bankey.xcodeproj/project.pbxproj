@@ -11,8 +11,6 @@
 		843C4269285BAE6B0014B778 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C4268285BAE6B0014B778 /* AccountSummaryCell.swift */; };
 		8451D90628B2BE8C00497DB3 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451D90528B2BE8C00497DB3 /* Date+Utils.swift */; };
 		8451D90828B2C1D700497DB3 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451D90728B2C1D700497DB3 /* AccountSummaryViewController+Networking.swift */; };
-		848CCA3928595F170046E1FC /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CCA3828595F170046E1FC /* AccountSummaryHeaderView.swift */; };
-		848CCA3B28595F3D0046E1FC /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848CCA3A28595F3D0046E1FC /* AccountSummaryHeaderView.xib */; };
 		848D4F9B285F8323008B1F8B /* AccountSummaryHeaderViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D4F9A285F8323008B1F8B /* AccountSummaryHeaderViewCode.swift */; };
 		849945F3286E611600E31042 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849945F2286E611600E31042 /* CurrencyFormatterTests.swift */; };
 		849945FA286F8B6F00E31042 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849945F9286F8B6F00E31042 /* NSNotificationName.swift */; };
@@ -32,6 +30,8 @@
 		84F5945D28B4176500769E9A /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5945C28B4176500769E9A /* AccountTests.swift */; };
 		84F5945F28B51F9C00769E9A /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5945E28B51F9C00769E9A /* SkeletonLoadable.swift */; };
 		84F5946128B52B9600769E9A /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5946028B52B9600769E9A /* SkeletonCell.swift */; };
+		84F5946428B6B5C600769E9A /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5946328B6B5C600769E9A /* ProfileManager.swift */; };
+		84F5946628B6B71A00769E9A /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5946528B6B71A00769E9A /* AccountSummaryViewControllerTests.swift */; };
 		84FA33B5283D9EBE008F0BFF /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA33B4283D9EBE008F0BFF /* OnboardingContainerViewController.swift */; };
 		84FA33B7283DAAC6008F0BFF /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA33B6283DAAC6008F0BFF /* Controller.swift */; };
 		84FA33B9284041C2008F0BFF /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA33B8284041C2008F0BFF /* DummyViewController.swift */; };
@@ -53,8 +53,6 @@
 		843C4268285BAE6B0014B778 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		8451D90528B2BE8C00497DB3 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		8451D90728B2C1D700497DB3 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
-		848CCA3828595F170046E1FC /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
-		848CCA3A28595F3D0046E1FC /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		848D4F9A285F8323008B1F8B /* AccountSummaryHeaderViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderViewCode.swift; sourceTree = "<group>"; };
 		849945F0286E611600E31042 /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849945F2286E611600E31042 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
@@ -77,6 +75,8 @@
 		84F5945C28B4176500769E9A /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		84F5945E28B51F9C00769E9A /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		84F5946028B52B9600769E9A /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
+		84F5946328B6B5C600769E9A /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		84F5946528B6B71A00769E9A /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 		84FA33B4283D9EBE008F0BFF /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		84FA33B6283DAAC6008F0BFF /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		84FA33B8284041C2008F0BFF /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +108,7 @@
 				8451D90728B2C1D700497DB3 /* AccountSummaryViewController+Networking.swift */,
 				843C4266285BAE290014B778 /* Header */,
 				843C4267285BAE450014B778 /* Cells */,
+				84F5946228B6B5A600769E9A /* Networking */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -116,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				848D4F9A285F8323008B1F8B /* AccountSummaryHeaderViewCode.swift */,
-				84E4218E28ADAE9000BD575A /* StoryboardToDelete */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -201,15 +201,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		84E4218E28ADAE9000BD575A /* StoryboardToDelete */ = {
-			isa = PBXGroup;
-			children = (
-				848CCA3828595F170046E1FC /* AccountSummaryHeaderView.swift */,
-				848CCA3A28595F3D0046E1FC /* AccountSummaryHeaderView.xib */,
-			);
-			path = StoryboardToDelete;
-			sourceTree = "<group>";
-		};
 		84F5945828B414E000769E9A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,8 +214,17 @@
 			children = (
 				84F5945A28B4153E00769E9A /* ProfileTests.swift */,
 				84F5945C28B4176500769E9A /* AccountTests.swift */,
+				84F5946528B6B71A00769E9A /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		84F5946228B6B5A600769E9A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				84F5946328B6B5C600769E9A /* ProfileManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		84FA33B3283D9EA0008F0BFF /* Onboarding  */ = {
@@ -339,7 +339,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				848CCA3B28595F3D0046E1FC /* AccountSummaryHeaderView.xib in Resources */,
 				84A6C5BA2829E03200D9746F /* LaunchScreen.storyboard in Resources */,
 				84A6C5B72829E03200D9746F /* Assets.xcassets in Resources */,
 			);
@@ -355,6 +354,7 @@
 				849945F3286E611600E31042 /* CurrencyFormatterTests.swift in Sources */,
 				84F5945D28B4176500769E9A /* AccountTests.swift in Sources */,
 				84F5945B28B4153E00769E9A /* ProfileTests.swift in Sources */,
+				84F5946628B6B71A00769E9A /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +381,7 @@
 				84E4219028ADB8F400BD575A /* UIView+Extension.swift in Sources */,
 				849945FA286F8B6F00E31042 /* NSNotificationName.swift in Sources */,
 				849945FC286F8D5800E31042 /* UITextFieldSecureToggle.swift in Sources */,
-				848CCA3928595F170046E1FC /* AccountSummaryHeaderView.swift in Sources */,
+				84F5946428B6B5C600769E9A /* ProfileManager.swift in Sources */,
 				84FA33BC28404CF7008F0BFF /* LocalState.swift in Sources */,
 				84FA33B5283D9EBE008F0BFF /* OnboardingContainerViewController.swift in Sources */,
 				84E4218D28ADAA1600BD575A /* ShakeyBell.swift in Sources */,
